@@ -7,7 +7,7 @@
 [![docker-compose](https://img.shields.io/badge/dockercompose-%5E1.24.01-blue.svg)](https://docs.docker.com/compose)
 [![docker](https://img.shields.io/badge/docker-%5E19.03.02-blue.svg)](https://www.docker.com/)
 
-TODO - Explain the purpose of the project.
+The point of this project is to build upon Djangos tutorial project with my own preferential practices and additional tooling for a better development. It will serve as a reliable model for similar projects in the future.
 
 ### Getting Started
 
