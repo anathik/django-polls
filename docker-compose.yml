@@ -1,11 +1,31 @@
 version: "3"
 services:
+  app:
+    image: "polls"
+    container_name: "polls_app"
+    command: ["./wait-for-postgres.sh", "db", "python", "manage.py", "runserver", "0.0.0.0:8000"]
+    ports: 
+      - "8080:8000"
+    depends_on:
+      - db
+    environment:
+      - PG_DB_NAME=polls_db
+      - PG_USER=polls_user
+      - PG_PASSWORD=pg123
+      - PG_HOST=db
+      - PG_PORT=5432
+    volumes:
+      - .:/app
   db:
     image: "postgres"
     container_name: "polls_postgres"
     ports:
-      - "54320:5432"
+      - "5432:5432"
     volumes:
       - my_dbdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=polls_db
+      - POSTGRES_USER=polls_user
+      - POSTGRES_PASSWORD=pg123
 volumes:
   my_dbdata:

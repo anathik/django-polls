@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'example_polls.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'polls_db',
-        'USER': 'postgres',
-        'PASSWORD': '',
-        'HOST': '192.168.1.219',
-        'PORT': '54320'
+        'NAME': os.getenv('PG_DB_NAME'),
+        'USER': os.getenv('PG_USER'),
+        'PASSWORD': os.getenv('PG_PASSWORD'),
+        'HOST': os.getenv('PG_HOST'),
+        'PORT': os.getenv('PG_PORT', '5432'),
     }
 }
 
