@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://docs.djangoproject.com/en/2.2/intro/reusable-apps/">
+  <a href="https://docs.djangoproject.com/en/2.2/">
     <img src="https://icon-library.net//images/django-icon/django-icon-0.jpg" width="150" />
   </a>
 </p>
